@@ -13,6 +13,7 @@ from Strategies.momentum_strategy import MomentumStrategy
 from Strategies.mean_reversion_strategy import MeanReversionStrategy
 from Strategies.fama_french_strategy import FamaFrenchStrategy
 from Strategies.regime_adaptive_strategy import RegimeAdaptiveStrategy
+from Strategies.news_llm_strategy import LLMNewsStrategy
 from Simulator.simulator import Simulator
 
 

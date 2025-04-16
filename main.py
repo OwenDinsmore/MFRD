@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,7 +11,6 @@ from Strategies.mean_reversion_strategy import MeanReversionStrategy
 from Strategies.fama_french_strategy import FamaFrenchStrategy
 from Strategies.regime_adaptive_strategy import RegimeAdaptiveStrategy
 from Strategies.news_llm_strategy import LLMNewsStrategy
-
 
 
 #------------------------------------------------------------------------------------------------------------------
@@ -27,7 +27,6 @@ def main():
     
     # Initialize model
     model = Model()
-    strategy = LLMNewsStrategy(news_api_key="YOUR_API_KEY")
 
     # Load sample data
     print("\nLoading market data...")
@@ -51,8 +50,7 @@ def main():
     model.register_strategy("Mean Reversion", MeanReversionStrategy)
     model.register_strategy("Fama-French", FamaFrenchStrategy)
     model.register_strategy("Regime Adaptive", RegimeAdaptiveStrategy)
-    model.register_strategy("LLM News", strategy)
-    
+    model.register_strategy("LLM News", LLMNewsStrategy)    
     # Backtest strategies
     print("\nRunning backtest...")
     results = model.backtest_all_strategies()

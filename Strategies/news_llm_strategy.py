@@ -27,7 +27,7 @@ logger.setLevel(logging.INFO)  # Set as needed; INFO or DEBUG for more detail
 #   - Neutral sentiment results in no trading action.
 #------------------------------------------------------------------------------------------------------------------
 class LLMNewsStrategy(BaseStrategy):
-    def __init__(self, tickers=None, news_count=15, news_api_key=None):
+    def __init__(self, tickers=None, news_count=15, news_api_key="78a9ce1b9eba4a5fba164b235977b0f2"):
         """
         Initialize the LLM News strategy with vector similarity, automated headline fetching,
         enhanced error logging, and sophisticated sentiment thresholds.
